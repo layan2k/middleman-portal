@@ -461,4 +461,126 @@ p {
   padding: 2em;
   gap: 2em;
 }
+
+@media screen and (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    padding: .2em;
+  }
+  section {
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .nav {
+    background-color: #000;
+    gap: 0.5em;
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding-top: 0;
+  }
+  .nav .nav-wrapper {
+    width: 100%;
+  }
+  .nav .nav-wrapper .logo-wrapper {
+    margin: 0 em;
+  }
+  .nav .nav-wrapper .nav-items {
+    margin: 0em;
+  }
+  .nav .nav-wrapper .nav-items li {
+    margin: 0 2em;
+  }
+  .nav .nav-wrapper .nav-items li:nth-child(3) {
+    display: none;
+  }
+  .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 4em;
+  }
+  .hero h1 {
+    font-size: 30px;
+  }
+  .hero p {
+    font-size: 18px;
+  }
+  .order {
+    padding: auto;
+    height: auto;
+  }
+  .order .form {
+    width: 80%;
+  }
+  .order .form legend {
+    margin-top: 2em;
+    font-size: 22px;
+  }
+  .order .form form {
+    font-size: 16px;
+    padding: 1em;
+  }
+  .order .form form .input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 1em;
+    padding: .5em;
+    width: 80%;
+  }
+  .order .form form .input input {
+    border: 2px solid black;
+    height: 30px;
+    width: 160px;
+    margin: .5em;
+    padding: 0.5em;
+  }
+  .footer {
+    width: 80%;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 4em;
+    padding: 1em;
+    padding-top: 10em;
+  }
+  .footer .f-wrapper {
+    width: 80%;
+  }
+  .footer .f-wrapper li {
+    font-size: 18px;
+  }
+  .footer .f-wrapper li p {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 /*# sourceMappingURL=default.css.map */
