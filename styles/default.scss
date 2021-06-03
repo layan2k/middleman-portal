@@ -352,3 +352,116 @@ p{
     padding: 2em;
     gap: 2em;
 }
+
+@media screen and(max-width: 800px) {
+    body{
+        overflow-x: hidden;
+        width: 100vw;
+        height: 100vh;
+        padding: .2em;
+    }
+
+    section{
+        padding: 0;
+        overflow-x: hidden;
+    }
+    .nav{ 
+        background-color: #000;
+        gap: 0.5em;
+        width: 95%;
+        display: flex;
+        justify-content: space-evenly;
+        .nav-wrapper{
+            width: 100%;
+
+            .logo-wrapper{
+                margin: 0 em;
+            }
+
+            .nav-items{
+                margin: 0em;
+                li{
+                    margin: 0 2em;
+                }
+
+                li:nth-child(3){
+                    display: none;
+                }
+            }
+        }
+
+        padding-top: 0;
+    }
+
+    .hero{
+        @include allCentre();
+        padding-top: 4em;
+        h1{
+            font-size: 30px;
+        }
+
+        p{
+            font-size: 18px;
+        }
+    }
+
+    .order{
+        padding: auto;
+        height: auto;
+        .form{
+            width: 80%;
+
+            legend{
+                margin-top: 2em;
+                font-size: 22px;
+            }
+
+            form{
+                font-size: 16px;
+                padding: 1em;
+
+                .input {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 1em;
+                    padding: .5em;
+                    width: 80%;
+
+                    input {
+                        border: 2px solid black;
+                        height: 30px;
+                        width: 160px;
+                        margin: .5em;
+                        padding: 0.5em;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer{
+        width: 80%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4em;
+        padding: 1em;
+        padding-top: 10em;
+
+        .f-wrapper{
+            width: 80%;
+
+            li{
+                font-size: 18px;
+
+                p{
+                    justify-content: center;
+                    align-items: center;
+
+                }
+            }
+        }
+    }
+    
+}
