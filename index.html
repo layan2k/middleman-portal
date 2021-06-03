@@ -5,9 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Middleman Deliveries | Orders</title>
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- CSS  -->
     <link rel="stylesheet" href="styles/default.css">
+
+    <!--jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 <body>
   <section class="nav">
@@ -34,41 +41,41 @@
 
       <form action="submit">
         <div class="input">
-          <label for="sname">Sender</label>
-          <input id="sname" type="text" placeholder="Supplier name">
+          <label for="sender">Sender</label>
+          <input id="sender" type="text" placeholder="Supplier name">
         </div>
 
         <div class="input">
-          <label for="sname">Receipient</label>
-          <input id="sname" type="text" placeholder="Customer name">
+          <label for="receiver">Receipient</label>
+          <input id="receiver" type="text" placeholder="Customer name">
         </div>
 
         <div class="input">
-          <label for="sname">Origin</label>
-          <input id="sname" type="text" placeholder="Pick-up location">
+          <label for="origin">Origin</label>
+          <input id="origin" type="text" placeholder="Pick-up location">
         </div>
 
         <div class="input">
-          <label for="sname">Destination</label>
-          <input id="sname" type="text" placeholder="Drop-off location">
+          <label for="dest">Destination</label>
+          <input id="dest" type="text" placeholder="Drop-off location">
         </div>
 
         <div class="input">
-          <label for="sname">Contact</label>
-          <input id="sname" type="text" placeholder="Mobile No.">
+          <label for="contact">Contact</label>
+          <input id="contact" type="text" placeholder="Mobile No.">
         </div>
 
         <div class="input">
-          <label for="sname">Driver</label>
-          <input id="sname" type="text" placeholder="Driver name">
+          <label for="driver">Driver</label>
+          <input id="driver" type="text" placeholder="Driver name">
         </div>
 
         <div class="input">
-          <label for="sname">Price</label>
-          <input id="sname" type="text" placeholder="5, 6 or 7">
+          <label for="price">Price</label>
+          <input id="price" type="text" placeholder="5, 6 or 7">
         </div>
       </form>
-      <button type="submit">Submit</button>
+      <button id="submit-btn" type="submit">Submit</button>
     </div>
   </section>
 
