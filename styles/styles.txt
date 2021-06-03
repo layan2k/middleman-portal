@@ -1,0 +1,3 @@
+Primary Color: #D48309
+Secondary Color: #000000
+Tertiary Color: #fff
