@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Middleman Deliveries | About</title>
+    <title>Middleman Deliveries | Orders</title>
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- CSS  -->
     <link rel="stylesheet" href="../styles/default.css">
+
+    <!--jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 <body>
   <section class="nav">
     <div class="nav-wrapper">
       <div class="logo-wrapper">
-        <a href="../index.html"><img src="../images/logo.png" alt=""></a>
+        <a href="orders.html"><img src="../images/logo.png" alt=""></a>
       </div>
       <ul class="nav-items">
         <li><a href="about.html">About</a></li>
         <li><a href="drivers.html">Drivers</a></li>
-        <li><a href="#"><button>Order</button></a></li>
       </ul>
   </div>
   </section>
@@ -26,22 +32,50 @@
   <section class="hero">
     <h1>Middleman Deliveries</h1>
     <p>From the World, To Your Doorstep.</p>
-    <a href="../index.html"><img src="../images/delivery.svg" alt=""></a>
+    <img src="../images/delivery.svg" alt="">
   </section>
 
-  <section class="about">
-    <div class="card-wrapper">
-        <div class="about-us">
-            <img src="" alt="">
-            <div class="text-wrapper">
-                <h2>About Us</h2>
-                <p>Established in 2021, Middleman Deliveries, is a full scale delivery service based in Harare, Zimbabwe, with future endeavours of expansion to other towns, countries & continents. Currently we deliver goods from valued local businesses such as confectionaries, and clothing stores. We are open to partnering with growing businesses, allowing them to utilize our marketing platform to broaden and expand their reach. We strive to handle our delivery services with love and care, maintainig a high level of professionalism. We believe in giving back to our community, honoring God with our funds to help encrich the lives of the less privledged.</p>
-            </div>
+  <section class="order">
+    <div class="form">
+      <legend>Order Form</legend>
+
+      <form action="submit">
+        <div class="input">
+          <label for="sender">Sender</label>
+          <input id="sender" type="text" placeholder="Supplier name">
         </div>
-        <div class="del-info">
-            <h2>Delivery Information</h2>
-            <p>All our packages are handled with utmost care. We operate using cars driven by passionate & skilled drivers, who will provide the highest level of customer care.</p>
+
+        <div class="input">
+          <label for="receiver">Receipient</label>
+          <input id="receiver" type="text" placeholder="Customer name">
         </div>
+
+        <div class="input">
+          <label for="origin">Origin</label>
+          <input id="origin" type="text" placeholder="Pick-up location">
+        </div>
+
+        <div class="input">
+          <label for="dest">Destination</label>
+          <input id="dest" type="text" placeholder="Drop-off location">
+        </div>
+
+        <div class="input">
+          <label for="contact">Contact</label>
+          <input id="contact" type="text" placeholder="Mobile No.">
+        </div>
+
+        <div class="input">
+          <label for="driver">Driver</label>
+          <input id="driver" type="text" placeholder="Driver name">
+        </div>
+
+        <div class="input">
+          <label for="price">Price</label>
+          <input id="price" type="text" placeholder="5, 6 or 7">
+        </div>
+      </form>
+      <button id="submit-btn" type="submit">Submit</button>
     </div>
   </section>
 
@@ -50,7 +84,7 @@
     <div class="f-wrapper">
       <h2>Social links</h2>
       <ul class="social-links">
-        <li><a href="https://www.instagram.com/middlemanafrica/"><img style="background-color: white;" src="../images/instagram.svg" alt=""><p>@middlemanafrica</p></a></li>
+        <li><a href="https://www.instagram.com/middlemanafrica"><img style="background-color: white;" src="../images/instagram.svg" alt=""><p>@middlemanafrica</p></a></li>
         <li><a href="https://www.facebook.com/middlemanafrica/?__xts__[facebook]="><img src="../images/facebook.png" alt=""><p>@middlemanafrica</p></a></li>
         <li><a href=""><img src="../images/twitter.png" alt=""><p>@middlemanafrica</p></a></li>
       </ul>

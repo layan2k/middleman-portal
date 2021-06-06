@@ -66,6 +66,7 @@ body{
     color: #fff;
     padding: 4em 0;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 section{
@@ -175,6 +176,69 @@ p{
     }
 }
 
+.login{
+    height: 15vh;
+    width: 80%;
+    @include allCentre();
+    padding: 10em;
+    flex-direction: column;
+    
+
+    .header{
+        @include allCentre();
+        flex-direction: column;
+        border: 3px solid white;
+        border-bottom: none;
+        width: 400px;
+        padding: 2em;
+
+        img{
+            background-color: $mmgold;
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 1em;
+            padding: .5em;
+            
+
+            &:hover{
+                background-color: $mmgold;
+                padding: .7em;
+            }
+
+        }
+    }
+
+    .login-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        padding: 2em;
+        border: 3px solid white;
+        border-top: none;
+        width: 400px;
+
+        .input{
+            font-family: 'Open Sans', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            gap: 1em;
+            width: 200px;
+
+            input{
+                height: 30px;
+            }
+        }
+
+        button{
+            @include buttonStyle();
+        }
+    }
+}
+
 .order{
     padding: 0;
     width: 100vw;
@@ -249,8 +313,6 @@ p{
     .card-wrapper{
         margin-top: 0em;
         @include allCollumn();
-        justify-content: center;
-        align-items: center;
         width: 60vw;
         border: 5px solid white;
         border-radius: 10px;
@@ -258,6 +320,8 @@ p{
         color: #000;
         background-color: #D48309;
         padding: 1em;
+
+        gap: 4em;
     }
 }
 
@@ -275,8 +339,6 @@ p{
         .card-wrapper {
             margin-top: 0em;
             @include allCollumn();
-            justify-content: center;
-            align-items: center;
             width: 60vw;
             border: 5px solid white;
             border-radius: 10px;
@@ -284,6 +346,41 @@ p{
             color: #000;
             background-color: #D48309;
             padding: 1em;
+            align-items: center;
+
+            h2{
+                text-align: center;
+            }
+            
+
+            .driver-table{
+                border: 1px solid #000;
+                width: 70%;
+                font-family: 'Open Sans', sans-serif;
+                background-color: #000;
+                color: #fff;
+
+                th{
+                    border: 1px solid black;
+                    padding: 1em 2em;
+                }
+                
+                td{
+                    border: 1px solid black;
+                    padding: 1em 2em;
+
+                    .avail{
+                        @include ellipse(20px);
+                        background-color: greenyellow;
+                    }
+
+                    .non-avail{
+                        @include ellipse(20px);
+                        background-color: red;
+                    }
+                }
+
+            }
         }
 }
 
@@ -403,6 +500,25 @@ p{
         p{
             font-size: 18px;
         }
+    }
+
+    .login{
+        height: auto;
+        width: 95%;
+    }
+
+    .about{
+        height: auto;
+        width: 95%;
+
+        .card-wrapper{
+            height: auto;
+            font-size: 16px;
+        }
+    }
+
+    .driver{
+
     }
 
     .order{

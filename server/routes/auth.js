@@ -17,13 +17,27 @@ router.post('/create-user', async (req,res)=>{
     .then((res)=>{
         res.send(newUser);
     }).catch(err => res.status(500).send(err));
-
-    
+  
 });
 
-router.post('/login', (req,res)=>{
+router.post('/login', async (req,res)=>{
+    let user = await User.findOne({username: req.body.username});
+    if(!user) res.status(500).send('Username is incorrect');
 
+    let validPass = await bcrypt.compare(user.password, req.body.password)
+    if(!validPass) res.status(500).send('Password is incorrect');
 
+    res.send('logged in');
 });
+
+router.get('/user', async (req,res)=> {
+    await User.find().then(result => res.json(result))
+    .catch(err => res.status(500).send(err));
+});
+
+router.delete('/delete-user/:user', async (req, res)=> {
+    await User.deleteOne({username: req.params.user}).then(result => res.json("Deleted"))
+    .catch(err => res.status(500).send(err));
+})
 
 module.exports = router;

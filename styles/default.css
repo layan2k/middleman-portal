@@ -14,6 +14,8 @@ body {
   color: #fff;
   padding: 4em 0;
   overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 section {
@@ -167,6 +169,115 @@ p {
   padding: .7em;
 }
 
+.login {
+  height: 15vh;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 3px solid white;
+  border-bottom: none;
+  width: 400px;
+  padding: 2em;
+}
+
+.login .header img {
+  background-color: #D48309;
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin: 1em;
+  padding: .5em;
+}
+
+.login .header img:hover {
+  background-color: #D48309;
+  padding: .7em;
+}
+
+.login .login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border: 3px solid white;
+  border-top: none;
+  width: 400px;
+}
+
+.login .login-form .input {
+  font-family: 'Open Sans', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1em;
+  width: 200px;
+}
+
+.login .login-form .input input {
+  height: 30px;
+}
+
+.login .login-form button {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  font-size: 20px;
+  width: 100px;
+  height: 50px;
+  background-color: #D48309;
+  border: none;
+  border-radius: 10px;
+}
+
+.login .login-form button:hover {
+  background-color: #fff;
+  color: black;
+  border: 3px solid #D48309;
+}
+
 .order {
   padding: 0;
   width: 100vw;
@@ -291,12 +402,6 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 60vw;
   border: 5px solid white;
   border-radius: 10px;
@@ -304,6 +409,7 @@ p {
   color: #000;
   background-color: #D48309;
   padding: 1em;
+  gap: 4em;
 }
 
 .driver {
@@ -334,12 +440,6 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 60vw;
   border: 5px solid white;
   border-radius: 10px;
@@ -347,6 +447,45 @@ p {
   color: #000;
   background-color: #D48309;
   padding: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.driver .card-wrapper h2 {
+  text-align: center;
+}
+
+.driver .card-wrapper .driver-table {
+  border: 1px solid #000;
+  width: 70%;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.driver .card-wrapper .driver-table th {
+  border: 1px solid black;
+  padding: 1em 2em;
+}
+
+.driver .card-wrapper .driver-table td {
+  border: 1px solid black;
+  padding: 1em 2em;
+}
+
+.driver .card-wrapper .driver-table td .avail {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: greenyellow;
+}
+
+.driver .card-wrapper .driver-table td .non-avail {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
 }
 
 .footer {
@@ -517,6 +656,18 @@ p {
   }
   .hero p {
     font-size: 18px;
+  }
+  .login {
+    height: auto;
+    width: 95%;
+  }
+  .about {
+    height: auto;
+    width: 95%;
+  }
+  .about .card-wrapper {
+    height: auto;
+    font-size: 16px;
   }
   .order {
     padding: auto;

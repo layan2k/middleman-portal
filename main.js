@@ -9,6 +9,23 @@ $(document).ready(function () {
         }
     });
 
+    $('#login-btn').click( function (e) {
+        var username = $('#username').val();
+        var password = $('#password').val();
+
+        // $.ajax({
+        //     type:'POST',
+        //     url: 'api/auth/login',
+        //     data: {username, password},
+        //     success: function(res){
+        //     document.location.href = '/pages/orders.html';
+        //     }
+        // });
+
+        document.location.href = '/pages/orders.html';
+        console.log(username, password);
+    });
+
     // Send the order form
     $('.submit-btn').click(function (e) { 
         e.preventDefault();
@@ -39,4 +56,7 @@ $(document).ready(function () {
             }
         });       
     });
+
+
+    
 });
