@@ -21,13 +21,17 @@ router.post('/create-user', async (req,res)=>{
 });
 
 router.post('/login', async (req,res)=>{
-    let user = await User.findOne({username: req.body.username});
-    if(!user) res.status(500).send('Username is incorrect');
+    await User.findOne({username: req.body.username}).then(result =>
+        res.json(result.password)).catch( err => res.status(400).send(err));
 
-    let validPass = await bcrypt.compare(user.password, req.body.password)
-    if(!validPass) res.status(500).send('Password is incorrect');
 
-    res.send('logged in');
+    // let validPass = await bcrypt.compare(req.body.password, user.password);
+    // if(!validPass) res.status(500).send('Password is incorrect');
+
+    // create token
+
+    // const token = jwt.sign({__id: user.__id}, process.env.ACCESS_TOKEN);
+    // res.header('auth-token', token).send(token);
 });
 
 router.get('/user', async (req,res)=> {

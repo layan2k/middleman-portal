@@ -211,15 +211,18 @@ p{
     }
 
     .login-form{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2em;
-        padding: 2em;
-        border: 3px solid white;
-        border-top: none;
-        width: 400px;
+        
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2em;
+            padding: 2em;
+            border: 3px solid white;
+            border-top: none;
+            width: 400px;
+            }
 
         .input{
             font-family: 'Open Sans', sans-serif;
@@ -296,6 +299,36 @@ p{
             @include buttonStyle();
             background-color: black;
         }
+    }
+}
+
+.err-msg{
+    color: red;
+    font-size: 14px;
+}
+
+.success{
+    padding: 0;
+    width: 100vw;
+    height: 50vh;
+    background: url(../images/wave.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fff;
+    color: black;
+    @include allCentre();
+    @include allCollumn();
+
+    h2{
+        font-size: 28px;
+        padding: 2em;
+    }
+    
+    a{
+        text-decoration: none;
+        color: $mmgold;
+        font-size: 20px;
+        padding: 1em;
     }
 }
 
@@ -505,6 +538,8 @@ p{
     .login{
         height: auto;
         width: 95%;
+        @include allCentre();
+        padding: 2em;
     }
 
     .about{
@@ -517,9 +552,9 @@ p{
         }
     }
 
-    .driver{
+    // .driver{
 
-    }
+    // }
 
     .order{
         padding: auto;

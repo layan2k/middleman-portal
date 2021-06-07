@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+  <%- include('./partials/nav.ejs') %> 
+  <%- include('./partials/hero.ejs') %> 
+  <section class="driver">
+    <div class="card-wrapper">
+        <div class="about-us">
+            <img src="" alt="">
+            <div class="text-wrapper">
+                <h2>Available Drivers:</h2>
+                <table class="driver-table">
+                  <thead>
+                    <th>Name</th>
+                    <th>Car</th>
+                    <th>Available</th>
+                  </thead>
+                  <tbody>
+                    <td>Kristien Nyamutsaka</td>
+                    <td>Corolla Verso</td>
+                    <td><div class="non-avail"></div></td>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <%- include('./partials/footer.ejs') %> 
+  <script src="../main.js"></script>
+</body>
+</html>

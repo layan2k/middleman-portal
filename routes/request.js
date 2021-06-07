@@ -28,7 +28,7 @@ router.post("/add", async (req,res)=> {
     });
 
     await newRequest.save()
-    .then(()=> res.json('request added!'))
+    .then(()=> res.render('success'))
     .catch((err)=> res.status(400).json('Error: '+ err));
 });
 

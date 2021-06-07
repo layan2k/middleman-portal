@@ -1,29 +1,36 @@
 $(document).ready(function () {
 
     // Get driver info for driver page
-    $.ajax({
-        type:"GET",
-        url: "api/driver/get",
-        success: function(res){
-            console.log(res);
-        }
-    });
-
+    // $.ajax({
+    //     type:"GET",
+    //     url: "api/driver/get",
+    //     success: function(res){
+            
+    //     }
+    // });
     $('#login-btn').click( function (e) {
         var username = $('#username').val();
         var password = $('#password').val();
 
-        // $.ajax({
-        //     type:'POST',
-        //     url: 'api/auth/login',
-        //     data: {username, password},
-        //     success: function(res){
-        //     document.location.href = '/pages/orders.html';
-        //     }
-        // });
+        var data ={
+            username,
+            password
+        }
 
-        document.location.href = '/pages/orders.html';
-        console.log(username, password);
+        
+        console.log(data);
+
+        $.ajax({
+            type:'POST',
+            url: 'http://localhost:5000/api/auth/login',
+            data: data,
+            success: function(result){
+                console.log(result);
+                // sessionStorage.setItem('auth-token', result);
+                // document.location.href = '/pages/orders.html';
+            }
+        });
+
     });
 
     // Send the order form
@@ -55,8 +62,5 @@ $(document).ready(function () {
                    console.log(response + " " + data);
             }
         });       
-    });
-
-
-    
+    });   
 });

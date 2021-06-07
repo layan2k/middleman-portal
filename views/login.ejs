@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
 
     <!-- CSS  -->
-    <link rel="stylesheet" href="./styles/default.css">
+    <link rel="stylesheet" href="../../styles/default.css">
 
     <!--jQuery -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -22,20 +22,27 @@
         <div class="header">
             <h1>Middleman Deliveries</h1>
             <p>From the World, To Your Doorstep.</p>
-            <img src="./images/delivery.svg" alt="">
+            <img src="../../images/delivery.svg" alt="">
         </div>
         <div class="login-form">
-            <div class="input">
+            <form action="/login" method="POST">
+              <p class="err-msg">
+                <% if(messages.error) { %>
+                  <%= messages.error %>
+                  <% } %> 
+              </p>
+              <div class="input">
                 <label for="username">Username</label>
-                <input type="text" id="username" placeholder="Username">
+                <input type="text" id="username" name="username" placeholder="Username" required>
             </div>
 
             <div class="input">
                 <label for="password">Password</label>
-                <input type="text" id="password" placeholder="Password">
+                <input type="text" id="password" name="password" placeholder="Password" required>
             </div>
 
             <button id="login-btn" type="submit">Login</button>
+            </form>
             
         </div>
     </section>
@@ -45,18 +52,18 @@
     <div class="f-wrapper">
       <h2>Social links</h2>
       <ul class="social-links">
-        <li><a href="https://www.instagram.com/middlemanafrica"><img style="background-color: white;" src="../images/instagram.svg" alt=""><p>@middlemanafrica</p></a></li>
-        <li><a href="https://www.facebook.com/middlemanafrica/?__xts__[facebook]="><img src="../images/facebook.png" alt=""><p>@middlemanafrica</p></a></li>
-        <li><a href=""><img src="../images/twitter.png" alt=""><p>@middlemanafrica</p></a></li>
+        <li><a href="https://www.instagram.com/middlemanafrica"><img style="background-color: white;" src="../../images/instagram.svg" alt=""><p>@middlemanafrica</p></a></li>
+        <li><a href="https://www.facebook.com/middlemanafrica/?__xts__[facebook]="><img src="../../images/facebook.png" alt=""><p>@middlemanafrica</p></a></li>
+        <li><a href=""><img src="../../images/twitter.png" alt=""><p>@middlemanafrica</p></a></li>
       </ul>
     </div>
 
     <div class="f-wrapper">
       <h2>Contact Us</h2>
       <ul class="social-links">
-        <li><p><img src="../images/telephone.svg" alt="">Phone</p><p>+263 779305605</p></li>
-        <li><p><img src="../images/whatsapp.png" alt="">Whatsapp</p><p>+263 779305605</p></li>
-        <li><p><img src="../images/email.svg" alt="">Email</p><p>middlemanafrica@gmail.com</p></li>
+        <li><p><img src="../../images/telephone.svg" alt="">Phone</p><p>+263 779305605</p></li>
+        <li><p><img src="../../images/whatsapp.png" alt="">Whatsapp</p><p>+263 779305605</p></li>
+        <li><p><img src="../../images/email.svg" alt="">Email</p><p>middlemanafrica@gmail.com</p></li>
       </ul>
     </div>
   </section>

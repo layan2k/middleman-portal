@@ -224,7 +224,7 @@ p {
   padding: .7em;
 }
 
-.login .login-form {
+.login .login-form form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -372,6 +372,48 @@ p {
   background-color: #fff;
   color: black;
   border: 3px solid #D48309;
+}
+
+.err-msg {
+  color: red;
+  font-size: 14px;
+}
+
+.success {
+  padding: 0;
+  width: 100vw;
+  height: 50vh;
+  background: url(../images/wave.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.success h2 {
+  font-size: 28px;
+  padding: 2em;
+}
+
+.success a {
+  text-decoration: none;
+  color: #D48309;
+  font-size: 20px;
+  padding: 1em;
 }
 
 .about {
@@ -660,6 +702,16 @@ p {
   .login {
     height: auto;
     width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2em;
   }
   .about {
     height: auto;
